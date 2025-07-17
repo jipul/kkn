@@ -9,7 +9,10 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #ffffff;
+            background-image: url('images/bg.jpeg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             color: #2e7d32; /* green */
         }
         header {
@@ -19,14 +22,6 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: #1b5e20; /* dark green */
-        }
-        main {
-            max-width: 700px;
-            margin: 2rem auto;
-            padding: 1rem 2rem;
-            background-color: #e8f5e9; /* very light green */
-            border-radius: 8px;
-            box-shadow: 0 0 10px #81c784;
         }
         table#menu-table {
             max-width: 400px;
@@ -89,71 +84,30 @@
 </head>
 <body>
     <header>
-        kelompok7 kkn ketitang
+        kelompok 7 ELIT GLOBAL
     </header>
     <main>
         <table id="menu-table" role="menu" aria-label="Menu Kelompok 7">
             <tr>
-                <td id="menu-proker" aria-label="Menu Proker" tabindex="0">proker</td>
+                <td id="menu-proker" aria-label="Menu Proker" tabindex="0"><a href="proker.html" style="color: white; text-decoration: none;">proker</a></td>
                 <td id="menu-kinerja" aria-label="Menu Kinerja" tabindex="0">kinerja</td>
-                <td id="menu-laporan" aria-label="Menu Laporan" tabindex="0">laporan</td>
+<td id="menu-laporan" aria-label="Menu Laporan" tabindex="0"><a href="laporan.html" style="color: white; text-decoration: none;">laporan</a></td>
+                <td id="menu-dokumentasi" aria-label="Menu Dokumentasi" tabindex="0"><a href="dokumentasi.html" style="color: white; text-decoration: none;">dokumentasi</a></td>
             </tr>
         </table>
 
         <ul class="member-list" aria-label="Daftar anggota kelompok">
-            <li>MPI:ABDULLOH:6221101002
-
-</li>
-            <li>BKPI:SITI FATIMATUZZAHRA:6221102031
-
-</li>
-            <li>BKPI:INDAH DWI KHOFIPAH:6221102026</li>
-            <li>MPI:M.FITO ALFARIZY:6221101025</li>
-            <li>MPI:IRFAN MAKSUDI:6221101019</li>
-            <li>BKPI:M.MEZA LUNA MULIA
-
-6221102012</li>
+            <li><a href="abdul.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">MPI:ABDULLOH:6221101002</a></li>
+            <li><a href="fatim.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">BKPI:SITI FATIMATUZZAHRA:6221102031</a></li>
+            <li><a href="indh.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">BKPI:INDAH DWI KHOFIPAH:6221102026</a></li>
+            <li><a href="fito.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">MPI:M.FITO ALFARIZY:6221101025</a></li>
+            <li><a href="irfn.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">MPI:IRFAN MAKSUDI:6221101019</a></li>
+            <li><a href="meza.html" style="color:#1b5e20; font-weight:600; text-decoration:none;">BKPI:M.MEZA LUNA MULIA</a></li>
         </ul>
 
         <section class="content" id="content-area">
         </section>
     </main>
 
-    <script>
-        const contentArea = document.getElementById('content-area');
-
-        function updateContent(menu) {
-            let content = '';
-            switch(menu) {
-                case 'proker':
-                    content = '<h2>Proker Kelompok 7</h2><p>Isi proker kelompok di sini.</p>';
-                    break;
-                case 'kinerja':
-                    content = '<h2>Kinerja Kelompok 7</h2><p>Isi kinerja kelompok di sini.</p>';
-                    break;
-                case 'laporan':
-                    content = '<h2>Laporan Kelompok 7</h2><p>Isi laporan kelompok di sini.</p>';
-                    break;
-                default:
-                    content = 'Silakan pilih menu di atas untuk melihat isi.';
-            }
-            contentArea.innerHTML = content;
-        }
-
-        document.getElementById('menu-proker').addEventListener('click', () => updateContent('proker'));
-        document.getElementById('menu-kinerja').addEventListener('click', () => updateContent('kinerja'));
-        document.getElementById('menu-laporan').addEventListener('click', () => updateContent('laporan'));
-
-        // Add keyboard accessibility for table menu items
-        const menuItems = document.querySelectorAll('#menu-table td');
-        menuItems.forEach(item => {
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    item.click();
-                }
-            });
-        });
-    </script>
-</body>
+        
 </html>
